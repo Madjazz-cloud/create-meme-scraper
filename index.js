@@ -44,7 +44,6 @@ function filter(data) {
       return 'https://memegen.link' + cutString;
     }
   );
-
   // 1.pick one string out of the array
   // 2. slice it
   // 3. give it back to me
@@ -54,26 +53,28 @@ function filter(data) {
 
   //matchesFiltered.map();
   // console.log(matchesCorrectSelectedStrings);
-  for (let i = 0; i < 10; i++) {
-    console.log(matchesCorrectSelectedStrings[i]);
-    console.log(i);
-  }
-
-  // let UrlString = matchesCorrectSelectedStrings[0];
-  // download(UrlString, './Image.jpg', function() {
-  //   console.log('done');
-}
-//matchesCorrectSelectedStrings.map(function get(string) {
-
-//console.log(matchesFilteredSliced[0]); // picks only one object aja image of an array
-
-//console.log(matchesFiltered.length); //counts all objects within an array! (a array is more than one string)
-//}
-
-// //download(
-//   'https://www.google.com/images/srpr/logo3w.png',
-//   'google.png',
-//   function() {
-//     console.log('done');
+//   for (let i = 0; i < 10; i++) {
+//     console.log(matchesCorrectSelectedStrings[i]);
+//     console.log(i);
 //   }
-// );
+  const fs = require('fs');
+  const dir = './memes';
+
+  try {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
+    }
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+// let UrlString = matchesCorrectSelectedStrings[i];
+// download(UrlString, './image.jpg'; function(){
+//   console.log('done');
+
+
+  // let UrlString = matchesCorrectSelectedStrings[i];
+  // download(UrlString, './Image.jpg', function() {
+  //   console.log('done'))
+  // };
